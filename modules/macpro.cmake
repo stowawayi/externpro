@@ -82,7 +82,7 @@ macro(proSetOpts) # NOTE: called by proInit
     else()
       proPlatformOpts()
     endif()
-    option(XP_BUILD_STATIC "build with static runtime (/MT), OFF: dynamic runtime (/MD)" ON)
+    option(XP_BUILD_STATIC "build with static runtime (/MT), OFF: dynamic runtime (/MD)" OFF)
   else()
     if((${CMAKE_SYSTEM_NAME} STREQUAL SunOS) OR (CMAKE_SIZEOF_VOID_P EQUAL 8))
       set(XP_BUILD_64BIT ON)
