@@ -36,7 +36,7 @@ function(build_llvm)
   endif()
   # we only need release builds of these clang tool executables
   set(BUILD_CONFIGS Release)
-  option(XP_BUILD_CLANGTIDY "build all of llvm to get clang-tidy" OFF)
+  option(XP_BUILD_CLANGTIDY "build all of llvm to get clang-tidy" ON)
   marK_as_advanced(XP_BUILD_CLANGTIDY)
   if(XP_BUILD_CLANGTIDY)
     xpCmakeBuild(llvm "${XP_DEPS}" "${XP_CONFIGURE}" llvmTgt NO_INSTALL)
